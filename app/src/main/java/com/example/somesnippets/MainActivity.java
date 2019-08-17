@@ -1,5 +1,6 @@
 package com.example.somesnippets;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,7 +24,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(isValid()){
-                    finish();
+                    Intent intent = new Intent(MainActivity.this,BaseActivity.class);
+                    startActivity(intent);
                 }
             }
         });
